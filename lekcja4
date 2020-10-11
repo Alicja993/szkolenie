@@ -1,0 +1,31 @@
+Tamagotchi to mała, elektroniczna zabawka pozwalająca "opiekować się" zwierzakiem. Tamagotchi wymaga karmienia, zabawy, czy sprzątania po nim.
+
+Zasady Tamagotchi:
+
+humor określa się na podstawie licznika głodu i znudzenia; dopóki głód jest poniżej określonego poziomu, i dopóki znudzenie jest poniżej określonego poziomu, dopóty Tamagotchi jest szczęśliwy
+karmienie zmniejsza poziom głodu o określoną liczbę punktów
+nauka nowych słówek lub przywitanie się z Tamagotchi zmniejsza poziom znudzenia o określoną liczbę punktów
+znane słówka są listą wyrażeń, które Tamagotchi może wypowiedzieć (np. "Mmmmrrp" albo "Hrrp")
+można wywołać metodę, która odpowiada "tyknięciu" zegara - w jej wyniku nuda i głód rosną o jedną jednostkę
+Implementacja Tamagotchi:
+
+pola klasy: imie, prog_nudy, prog_glodu, malenie_nudy, malenie_glodu, poziom_nudy, poziom_glodu, slowa (lista)
+metoda humor() musi zwracać, na podstawie prog_nudy, prog_glodu, poziom_nudy i poziom_glodu, czy Tamagotchi jest szczęśliwy, głodny lub znudzony
+metoda __str__() musi zwracać imię Tamagotchi i jego humor (np. "Jestem Tobi. Czuję się szczęśliwy.")
+metoda zegar() musi zwiększać poziom znudzenia i głodu o jedną jednostkę
+metody zmniejsz_glod() i zmniejsz_nude() mają zmniejszać odpowiednio poziom_glodu i poziom_nudy o malenie_glodu i malenie_nudy; uwaga: oba poziomy nie mogą spaść poniżej zera
+metoda przywitaj_sie() musi wylosować element z listy slowa, zmniejszyć nudę i wypisać na ekranie "{Imię} mówi {słowo}."
+metoda naucz_slowo(slowo) dodaje słowo do listy slowa i zmniejsza nudę
+metoda karm() zmniejsza głód
+metody karm(), naucz_slowo(), przywitaj_sie() oraz __str__() wywołują zegar().
+Do losowania elementu z listy slowa użyj funkcji random.choice.
+
+Za wartości początkowe możesz przyjąć:
+
+Pole	Wartość
+prog_nudy	5
+prog_glodu	10
+malenie_nudy	4
+malenie_glodu	6
+słowa	["Mmmmrrp", "Hrrp"]
+"""
